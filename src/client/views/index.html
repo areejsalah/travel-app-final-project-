@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+       
+    </head>
+
+    <body>
+
+        <header>
+            <div class="">
+                Logo
+            </div>
+            <div class="">
+                navigation
+            </div>
+        </header>
+
+        <main>
+            <section class="page-width">
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                   
+                    <input id="name" type="text" name="input" value="" placeholder="Name">
+
+                    <label for="destination">Destination</label>
+                    <input id="destination" type="text" required>
+
+                    <label for="destination">Depart</label>
+                    <input id="destination" type="date" required>
+
+                    <label for="destination">Return</label>
+                    <input id="destination" type="date" required>
+
+                    <input class="btn" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+            <section>
+
+            <section>
+                    <h2 class="h2">Analysis</h2>
+                <div class="result-wrapper">
+                    <div class="line-wrapper">
+                            <p>Confidence: </p>
+                            <div id="confidence"></div>
+                    </div>
+                    <div class="line-wrapper">
+                            <p>Subjectivity: </p>
+                            <div id="subjectivity"></div>
+                    </div>
+                    <div class="line-wrapper">
+                            <p>Irony: </p>
+                            <div id="irony"></div>
+                    </div>
+                     <div class="line-wrapper">
+                            <p>longitude: </p>
+                            <div id="longitude"></div>
+                    </div>
+                    <div class="line-wrapper">
+                        <p>latitude: </p>
+                        <div id="latitude"></div>
+                    </div>
+                    <div class="line-wrapper">
+                        <p>longitude: </p>
+                        <div id="country"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>This is a footer</p>
+        </footer>
+        <script>
+            // Check that service workers are supported
+            /* 
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+            */
+           </script>
+    </body>
+</html>
