@@ -10,11 +10,8 @@
     <body>
 
         <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
+            <div class="site-logo-wrapper">
+               <h1 class="site-logo">TravelApp&#174</h1>
             </div>
         </header>
 
@@ -23,15 +20,19 @@
                 <div class="city-card-wrapper">
                     <div class="city-card">
                         <div class="weather-top">
-                            <span class="weather-info-location weather-info">Lagos, NG</span>
-                            <span class="weather-info-date weather-info">Oct 26, 2020</span>
+                            <span class="weather-info-location weather-info" data-city></span>
+                            <span class="weather-info-date weather-info" data-today-date></span>
                         </div>
-                        <div class="weather-bottom">
-                            <span class="weather-info-temp">7<span class="temp-unit">&#8451;</span></span>
+                        <div class="weather-middle">
+                            <span class="weather-info-temp" data-today-weather></span>
                             <span class="weather-info-temp weather-imagery">
                                 <img class="weather-icon" src="./icons/c02d.png">
-                                <p class="weather-desc">Few clouds</p>
+                                <p class="weather-desc" data-today-desc></p>
                             </span>
+                        </div>
+                        <div class="weather-bottom">
+                            <span class="weather-info-location weather-info" data-lng></span>
+                            <span class="weather-info-date weather-info" data-lat></span>
                         </div>
                         
 
@@ -41,17 +42,68 @@
             </section>
             <section class="page-width">
                 <div class="forecast-wrapper">
-
+                    <h2 class="section-heading">Weather forecast</h2>
+                    <div class="forecast-inner-wrapper">
+                        <div class="weather-card">
+                            <p class="weather-card-desc">Tomorrow</p>
+                            <img class="weather-icon" src="./icons/c02d.png">
+                            <p class="minmax-temp">20&#8451; - 30&#8451;</p>
+                            <p class="weather-card-desc">Few clouds</p>
+                        </div>
+                        <div class="weather-card">
+                            <p class="weather-card-desc">Tomorrow</p>
+                            <img class="weather-icon" src="./icons/c02d.png">
+                            <p class="minmax-temp">20&#8451; - 30&#8451;</p>
+                            <p class="weather-card-desc">Few clouds</p>
+                        </div>
+                        <div class="weather-card">
+                            <p class="weather-card-desc">Tomorrow</p>
+                            <img class="weather-icon" src="./icons/c02d.png">
+                            <p class="minmax-temp">20&#8451; - 30&#8451;</p>
+                            <p class="weather-card-desc">Few clouds</p>
+                        </div>
+                        <div class="weather-card">
+                            <p class="weather-card-desc">Tomorrow</p>
+                            <img class="weather-icon" src="./icons/c02d.png">
+                            <p class="minmax-temp">20&#8451; - 30&#8451;</p>
+                            <p class="weather-card-desc">Few clouds</p>
+                        </div>
+                        <div class="weather-card">
+                            <p class="weather-card-desc">Tomorrow</p>
+                            <img class="weather-icon" src="./icons/c02d.png">
+                            <p class="minmax-temp">20&#8451; - 30&#8451;</p>
+                            <p class="weather-card-desc">Few clouds</p>
+                        </div>
+                    </div>
                 </div>
+            </section>
+            <section class="page-width">
+                <div class="itin-wrapper">
+                    <h2 class="section-heading">Travel itinerary</h2>
+                    <div class="depart">
+                        <p class="info-title">Departs</p>
+                        <p class="info-output">OCT 26, 2020</p>
+                    </div>
+                    <div class="return">
+                        <p class="info-title">Returns</p>
+                        <p class="info-output">OCT 26, 2020</p>
+                    </div>
+                    <div class="rem-days">
+                        <p class="info-title">Days left before trip</p>
+                        <p class="info-output">OCT 26, 2020</p>
+                    </div>
+                    <div class="travel-duration">
+                        <p class="info-title">Travel duration</p>
+                        <p class="info-output">OCT 26, 2020</p>
+                    </div>
+                </div>
+
             </section>
             <section class="page-width">
                 <div id="currentDate"></div>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                   
-                    <input id="name" type="text" name="input" value="" placeholder="Name">
-
                     <label for="destination">Destination</label>
-                    <input id="destination" type="text" required>
+                    <input id="destination" type="text" placeholder="City" required>
 
                     <label for="destination">Depart</label>
                     <input id="start-date" type="date"  required>

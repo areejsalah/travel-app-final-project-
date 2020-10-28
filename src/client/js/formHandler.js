@@ -1,4 +1,6 @@
 
+var moment = require('moment');// require momentjs
+
 function handleSubmit(event) {
   event.preventDefault()
   // check what text was put into the form field
@@ -23,7 +25,7 @@ console.log(todaysDate);
   } else{
     timeLeft ++;
   }
-  let daysOfForecast = 7
+  let daysOfForecast = 5;
   console.log("::: Form Submitted :::")
   fetch('http://localhost:8082/weatherbit', {
     method: 'POST',
@@ -58,9 +60,15 @@ console.log(todaysDate);
     document.getElementById('departs').innerHTML = departDate;
     document.getElementById('returns').innerHTML = returnDate;
     //document.getElementById('description').innerHTML = data.data[0].weather.description;
+    //document.querySelector('[data-today-date-test]').innerHTML = new Date(data.data[0].valid_date).toDateString();
+    document.querySelector('[data-today-date]').innerHTML = moment(data.data[0].valid_date).format("MMM Do YYYY");
+    //moment().format("MMM Do YY"); 
+    document.querySelector('[data-today-desc]').innerHTML = data.data[0].weather.description;
+    document.querySelector('[data-today-weather]').innerHTML =`${data.data[0].temp}<span class="temp-unit">&#8451;</span>`
+    
     let positionOnDom = document.querySelector('#forecast');
     
-    for (let i= 0; i <= daysOfForecast; i++){
+    for (let i= 1; i <= daysOfForecast; i++){
        let block = `<div class="line-wrapper">
                         <p> Day ${i} </p>
                         <div id="icons"><img src="icons/${data.data[i].weather.icon}.png"></div>
@@ -69,6 +77,8 @@ console.log(todaysDate);
                     </div>`;
                     positionOnDom.insertAdjacentHTML('afterend', block);
     }
+
+    
     //document.getElementById('aveTemp').innerHTML = data.data[0].temp;
     //let currentDate = new Date();
     //document.getElementById('currentDate').innerHTML = currentDate;
@@ -147,9 +157,13 @@ console.log(todaysDate);
   
     
     document.getElementById('latitude').innerHTML = data.postalCodes[0].lat;
+    document.querySelector('[data-lat]').innerHTML =`lat: ${data.postalCodes[0].lat}`;
     document.getElementById('longitude').innerHTML = data.postalCodes[0].lng;
+    document.querySelector('[data-lng]').innerHTML =`lon: ${data.postalCodes[0].lng}`;
     //document.getElementById('country').innerHTML = 
     document.getElementById('city').innerHTML = `${data.postalCodes[0].placeName}, ${data.postalCodes[0].countryCode}`;
+    document.querySelector('[data-city]').innerHTML =`${data.postalCodes[0].placeName}, ${data.postalCodes[0].countryCode}`;
+
     document.getElementById('countdown').innerHTML = timeLeft;
     //document.getElementById('departs').innerHTML = departDate;
     //document.getElementById('returns').innerHTML = returnDate;
