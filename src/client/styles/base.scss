@@ -156,6 +156,9 @@ form label{
     .weather-info-temp .weather-icon{
         width: 100px;
     }
+    .weather-card .weather-icon{
+        width: 100%;
+    }
 }
 
 .weather-card:nth-last-child(){
