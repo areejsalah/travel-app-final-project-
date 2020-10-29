@@ -22,7 +22,7 @@ input {
 
     /* dimension */
     --mobile-width: 460px;
-    --desktop-width: 1440px;
+    --desktop-width: 800px;
 
     /* color */
     --color-primary: #002e25;
@@ -57,9 +57,17 @@ input {
     $color-primary: #002e25;
     background-color: lighten($color-primary, 10%);
 }
+
+.page-width{
+    max-width: var(--desktop-width);
+    margin: 20px auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
     @media screen and (max-width: 590px) {
         .page-width{
             max-width: var(--mobile-width);
+            margin: 20px auto;
             
            
         }

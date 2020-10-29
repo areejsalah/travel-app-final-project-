@@ -62,13 +62,13 @@ app.post('/pixabay', (req, res) => {
     })
 
 app.post('/geonames', (req, res) => {
-    const urll = `http://api.geonames.org/postalCodeSearchJSON?placename=${req.body.destination}&maxRows=10&username=${geoUser}`
+    const url = `http://api.geonames.org/postalCodeSearchJSON?placename=${req.body.destination}&maxRows=10&username=${geoUser}`
         axios({
-            url: urll,
+            url: url,
             responseType:'json'
     
         }).then(data => res.json(data.data))
-         console.log(urll);  
+         console.log(url);  
     })
 
     app.post('/weatherbit', (req, res) => {
