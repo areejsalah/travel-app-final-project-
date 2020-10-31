@@ -72,10 +72,15 @@ import './icons/u00n.png'
 
 
 
-
-alert('i exist!!!!!')
-
 export {
     handleSubmit,
 
 }
+
+
+   //select form element
+    const form = document.querySelector("#form");
+
+  //add event listener
+  form.addEventListener('submit', handleSubmit);
+   

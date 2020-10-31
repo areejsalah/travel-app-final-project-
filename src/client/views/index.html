@@ -2,16 +2,16 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
-        
-       
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>TravelApp&#174; | Travel the world through oour lenses</title>
     </head>
 
     <body>
 
         <header>
             <div class="site-logo-wrapper">
-               <h1 class="site-logo">TravelApp&#174</h1>
+               <h1 class="site-logo">TravelApp&#174;</h1>
             </div>
         </header>
 
@@ -26,7 +26,7 @@
                         <div class="weather-middle">
                             <span class="weather-info-temp" data-today-weather>0</span>
                             <span class="weather-info-temp weather-imagery">
-                                <img class="weather-icon" data-weather-icon src="./icons/c02d.png">
+                                <img class="weather-icon" data-weather-icon src="">
                                 <p class="weather-desc" data-today-desc> - </p>
                             </span>
                         </div>
@@ -71,7 +71,7 @@
 
             </section>
             <section class="page-width">
-                <form class="" onsubmit="return Client.handleSubmit(event)">
+                <form id="form">
                     <label for="destination">Destination</label>
                     <input id="destination" type="text" value="" placeholder="City" required>
 
@@ -81,9 +81,9 @@
                     <label for="destination">Return</label>
                     <input id="end-date" type="date" value="" required>
 
-                    <input class="btn" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                    <input class="btn" type="submit" name="" value="submit">
                 </form>
-            <section>
+            </section>
         </main>
 
         <footer class="footer-section">
@@ -98,7 +98,6 @@
                     navigator.serviceWorker.register('/service-worker.js');
                 });
             }
-            
            </script>
     </body>
 </html>

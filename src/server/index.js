@@ -37,21 +37,10 @@ app.get('/', function (req, res) {
 app.listen(8082, function () {
     console.log('listening on port 8082!')
 })
-/*
-app.post('/meaning', (req, res) => {
-const url = `https://api.meaningcloud.com/sentiment-2.1?key=${apiKey}&lang=en&txt=${req.body.formText}`
-    axios({
-        url: url,
-        responseType:'json'
 
-    }).then(data => res.json(data.data))
-        
-})
-*/
 
 app.post('/pixabay', (req, res) => {
-    //https://pixabay.com/api/?key=18854359-960a9a9d77c92b4a88b1b54cc&q=yellow+flowers&image_type=photo
-    const url = `https://pixabay.com/api/?key=${pixaKey}&q=${req.body.destination}&image_type=photo`
+    const url = `https://pixabay.com/api/?key=${pixaKey}&q=${req.body.destination}&category=places&image_type=photo`
         axios({
             url: url,
             responseType:'json'
@@ -72,15 +61,7 @@ app.post('/geonames', (req, res) => {
     })
 
     app.post('/weatherbit', (req, res) => {
-        /*
-        if(req.body.destination != '' && req.body.returnDate =='' && req.body.departDate ==''){
-            weatherURL =`http://api.weatherbit.io/v2.0/current?city=${req.body.destination}`
-        }else{
-            //weatherURL =`http://api.weatherbit.io/v2.0/current?city=${req.body.destination}`
-            //weatherURL =`http://api.weatherbit.io/v2.0/forecast/daily?city=${req.body.destination}&start_date=${req.body.departDate}&end_date=${req.body.returnDate}`
-            weatherURL =`http://api.weatherbit.io/v2.0/forecast/daily?city=${req.body.destination}&days=${req.body.daysOfForecast}`
-        }
-        */
+        
         const url = `http://api.weatherbit.io/v2.0/forecast/daily?city=${req.body.destination}&days=${req.body.daysOfForecast}&key=${weatherKey}`
         console.log(url); 
             axios({

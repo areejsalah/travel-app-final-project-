@@ -1,6 +1,13 @@
 
 var moment = require('moment');// require momentjs
 
+//const form = document.querySelector("#form");
+
+
+
+  //event listener
+  //form.addEventListener('submit', handleSubmit);
+
 function handleSubmit(event) {
   event.preventDefault()
 
@@ -56,9 +63,7 @@ function handleSubmit(event) {
     },
     body: JSON.stringify({
       destination:  destination,
-      daysOfForecast: daysOfForecast,
-      departDate: departDate,
-      returnDate: returnDate
+      daysOfForecast: daysOfForecast
 
     })
     
@@ -90,8 +95,8 @@ function handleSubmit(event) {
                     positionOnDom.insertAdjacentHTML('beforeend', weatherCard);
     }
     
-  }).catch(err => alert("error - weatherbit"));
- 
+  }).catch(console.log("error - weatherbit"));
+  
   //pixabay
   console.log("::: Form Submitted :::")
   fetch('http://localhost:8082/pixabay', {
