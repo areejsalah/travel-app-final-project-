@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TravelApp
 
 The project include a simple form where you enter a location and also select departure and return dates. This info is passed on to the api to get image data from pixabay, weather forcast from weatherbit and location coordinates from geonames. Additionally, it helps to display the 
@@ -37,3 +38,6 @@ $ npm run start
 ![](https://screenshot.click/29-12-i4i6f-13aly.jpg)
 
 ![](https://screenshot.click/29-13-mcr55-z0xpo.jpg)
+=======
+# travel-app-final-project-
+>>>>>>> fe4100345c1a4c9dd4f40550220de6e00c7db46f
