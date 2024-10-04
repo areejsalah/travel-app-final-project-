@@ -69,7 +69,9 @@ $ npm run test
 The test results will be displayed on the terminal.
 
 ## Screenshots
-![11](https://github.com/user-attachments/assets/9051c236-3a67-4a75-805e-b8682df5f1
+![11](https://github.com/user-attachments/assets/6f82bb31-6fcd-4a43-91cd-e6e103e78658)
+
+
 ![222](https://github.com/user-attachments/assets/94c75359-758c-4293-ad3e-992b77afa7af)
 3e)
 
