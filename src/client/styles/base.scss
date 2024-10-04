@@ -161,7 +161,7 @@ form label{
     }
 }
 
-.weather-card:nth-last-child(){
+.weather-card:nth-last-child(n){
     border-right:0px;
 }
 .weather-card-desc{

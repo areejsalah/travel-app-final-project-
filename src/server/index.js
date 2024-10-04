@@ -1,6 +1,6 @@
 const dotenv = require('dotenv');
 dotenv.config();
-const apiKey = process.env.API_KEY;
+//const apiKey = process.env.API_KEY;
 const geoUser = process.env.GEO_USER_NAME;
 const weatherKey = process.env.WEBIT_KEY;
 const pixaKey = process.env.PIX_API;
