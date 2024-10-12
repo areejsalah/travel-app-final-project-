@@ -19,6 +19,7 @@ $ git clone https://github.com/areejsalah/travel-app-final-project-
 $ cd travel-app
 $ npm install
 ```
+The Node.js version that is compatible with my project is v20.
 
 ## Signup for API keys 🔑
 
