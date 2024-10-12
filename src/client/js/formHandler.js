@@ -74,7 +74,7 @@ function handleSubmit(event) {
     document.querySelector('[data-return-date]').innerHTML = moment(endDate).format("MMM Do YYYY");
     document.querySelector('[data-travel-length]').innerHTML = `${travelLength} ${daysSingularOrPlural}`
     document.querySelector('[data-day-left]').innerHTML = timeLeft;
-    document.querySelector('[data-today-date]').innerHTML = moment(data.data[0].valid_date).format("MMM Do YYYY");
+    document.querySelector('[data-today-date]').innerHTML = moment(data.datetime).format("MMM Do YYYY");
     document.querySelector('[data-today-desc]').innerHTML = data.data[0].weather.description;
     document.querySelector('[data-today-weather]').innerHTML =`${data.data[0].temp}<span class="temp-unit">&#8451;</span>`
     
@@ -86,7 +86,7 @@ function handleSubmit(event) {
     document.querySelector('[data-weather-icon]').src = `icons/${data.data[0].weather.icon}.png`
     for (let i= 1; i <= daysOfForecast; i++){
       let weatherCard = `<div class="weather-card">
-                            <p class="weather-card-desc">${moment(data.data[i].valid_date).format("MMM Do YYYY")}</p>
+                            <p class="weather-card-desc">${moment(data.datetime).format("MMM Do YYYY")}</p>
                             <img class="weather-icon" src="icons/${data.data[i].weather.icon}.png">
                             <p class="minmax-temp">${data.data[0].min_temp}&#8451; - ${data.data[0].max_temp}&#8451;</p>
                             <p class="weather-card-desc">${data.data[i].weather.description}</p>
