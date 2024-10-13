@@ -61,7 +61,13 @@ The development version of the app will be running in your browser on localhost:
 
 This project has a Testing Unit to check if the main functions are working correctly. Testing is done with Jest.
 
-To run tests you can use the following NPM command:
+first of all run the following NPM command to install 'supertest' which is popular testing library:
+
+```
+npm install --save-dev supertest
+```
+
+Then, to run tests you can use the following NPM command:
 
 ```
 $ npm run test
