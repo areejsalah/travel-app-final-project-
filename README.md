@@ -34,9 +34,9 @@ When you sign up, you'll be able to get your personal API keys for Weatherbit an
 At the root of the project, create a new file named .env. Inside the file, add the following lines, replacing the stars with your personal API keys and the Geonames username.
 
 ```
-GEOCODES_NAME=**************************
-WEATHERBIT_KEY=**************************
-PIXABAY_KEY=**************************
+GEO_USER_NAME=**************************
+WEBIT_KEY=**************************
+PIX_API=**************************
 ```
 
 
